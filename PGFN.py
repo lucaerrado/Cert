@@ -1,5 +1,5 @@
 import config
-import cliente
+import client
 import time
 import base64
 from selenium.common.exceptions import NoSuchElementException
@@ -8,7 +8,7 @@ browser = config.browser
 solver = config.solver
 
 browser.get('http://servicos.receita.fazenda.gov.br/Servicos/certidao/CNDConjuntaInter/EmiteCertidaoInternet.asp?Tipo'
-            '=2&NI='+cliente.CPF+'&passagens=0')
+            '=2&NI=' + client.CPF + '&passagens=0')
 
 while True:
 
@@ -17,7 +17,7 @@ while True:
                                                      "2]/table[2]/tbody/tr/td[3]/font/img")
         pesquisa = browser.find_element_by_xpath('/html/body/p/table/tbody/tr/td/p/table/tbody/tr/td/form/input[1]')
         pesquisa.clear()
-        pesquisa.send_keys(cliente.CPF)
+        pesquisa.send_keys(client.CPF)
 
         img_captcha_base64 = browser.execute_async_script("""
                                 var elem = arguments[0], callback = arguments[1];

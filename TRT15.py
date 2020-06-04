@@ -1,4 +1,4 @@
-import cliente
+import client
 import time
 import base64
 from selenium.webdriver.common.by import By
@@ -15,7 +15,7 @@ browser.get('https://ceat.trt15.jus.br/ceat/certidaoAction.seam')
 search_field = wait(browser, 5).until(
                 EC.presence_of_element_located((By.ID, "certidaoActionForm:j_id23:doctoPesquisa")))
 
-browser.find_element_by_id('certidaoActionForm:j_id23:doctoPesquisa').send_keys(cliente.CPF)
+browser.find_element_by_id('certidaoActionForm:j_id23:doctoPesquisa').send_keys(client.CPF)
 
 while True:
 

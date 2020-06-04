@@ -1,4 +1,4 @@
-import cliente
+import client
 import time
 import base64
 import pyperclip
@@ -8,7 +8,7 @@ import config
 
 browser = config.browser
 solver = config.solver
-pyperclip.copy(cliente.CPF)
+pyperclip.copy(client.CPF)
 
 browser.get('https://aplicacoes10.trt2.jus.br/certidao_trabalhista_eletronica/public/index.php/index/solicitacao')
 
