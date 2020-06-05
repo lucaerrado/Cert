@@ -1,1 +1,4 @@
-import PGFN, TRT2, TRT15
+import config
+import TST
+browser = config.browser
+browser.quit()
